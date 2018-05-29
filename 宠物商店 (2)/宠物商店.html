@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	<link type="text/css" rel="stylesheet" href="bootstrap3/css/bootstrap.min.css"/>
+	<script src="bootstrap3/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+  	<!--由于bootstrap使用的媒体查询在IE8上不支持，所以还要在meta标签下面加入如下代码-->
+    <!--利用条件注释法判断浏览器版本，如果是IE9以下的的浏览器就加载下面两个js文件解决媒体查询在IE8上的不支持情况-->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<style>
+		.myright li a:hover{
+			color: red !important;
+		}
+	</style>
+	
+	<body>
+		<!--头部导航-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">宠物用品店</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right myright">
+        <li><a class="navbar-link" data-toggle="modal" data-target="#login" href="#">[登录]</a></li>
+        <li><a class="navbar-link" data-toggle="modal" data-target="#resiger" href="#">[注册]</a></li>
+        <li><a class="navbar-link" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车(0)</a></li>
+        <li>
+			<a href="#" class="navbar-link"><span class="glyphicon glyphicon-user"></span> 个人中心</a>
+		</li>
+		<li>
+			<a href="#" class="navbar-link"><span class="glyphicon glyphicon-heart"></span> 收藏本站</a>
+		</li>
+		<li>
+			<a href="#" class="navbar-link">？帮助</a>
+		</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--头部导航结束-->
+<!--内容区开始-->
+<div class="container">
+	<!--登陆模态-->
+		<div class="modal fade" tabindex="-1" role="dialog" id="login">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">登录</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form class="form-group" action="">
+		        	<div class="form-group">
+		        		<label class="control-label">用户名</label>
+						<input type="text" class="form-control">
+		        	</div>
+		        	<div class="form-group">
+		        		<label class="control-label">密码</label>
+						<input type="text" class="form-control">
+		        	</div>
+		        </form> 
+		      </div>
+		      <div class="modal-footer">
+		       
+		        <button type="button" class="btn btn-primary">登陆</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	<!--注册模态-->
+	<!--登陆模态-->
+		<div class="modal fade" tabindex="-1" role="dialog" id="resiger">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">注册</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form class="form-group" action="">
+		        	<div class="form-group">
+		        		<label class="control-label">用户名</label>
+						<input type="text" class="form-control">
+		        	</div>
+		        	<div class="form-group">
+		        		<label class="control-label">密码</label>
+						<input type="text" class="form-control">
+		        	</div>
+		        </form> 
+		      </div>
+		      <div class="modal-footer">
+		       
+		        <button type="button" class="btn btn-primary">注册</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+	<!--logo部分-->	
+	<div class="top" style="margin-top: 63px;">
+		<div class="row">
+			<p class="col-md-3">
+				<img src="images/logo.png"/>
+			</p>
+		</div>
+	</div>
+	<!--导航条-->
+	<nav class="navbar navbar-default navbar-static-top">
+	  <div class="container">
+	   
+			<ul class="nav navbar-nav">
+				<li><a class="navbar-brand" href="#">E宠商城</a></li>
+				<li><a href="#"><b>首页</b></a></li>
+			    <li><a href="#">新品上市</a></li>
+
+		        <li class="dropdown">
+		         	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">优惠折扣<span class="caret"></span></a>
+		         	
+		         	<ul class="dropdown-menu" role="menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li><a href="#">Something else here</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">One more separated link</a></li>
+		          	</ul>
+	       		</li>
+
+	       		 <li class="dropdown">
+		         	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">宠物新闻<span class="caret"></span></a>
+		         	<ul class="dropdown-menu" role="menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li><a href="#">Something else here</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">One more separated link</a></li>
+		          	</ul>
+	       		</li>
+
+	       		 <li class="dropdown">
+		         	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">品牌街<span class="caret"></span></a>
+		         	<ul class="dropdown-menu" role="menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li><a href="#">Something else here</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			            <li class="divider"></li>
+			            <li><a href="#">One more separated link</a></li>
+		          	</ul>
+	       		</li>
+	      </ul>
+	  </div>
+	</nav>
+	<!--轮播图-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- 圆点部分 -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- 轮播部分 -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/banner1.png" alt="...">
+      <div class="carousel-caption">
+        	活动1
+      </div>
+    </div>
+     <div class="item">
+      <img src="images/banner3.png" alt="...">
+      <div class="carousel-caption">
+      	  活动2
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/banner2.png" alt="...">
+      <div class="carousel-caption">
+       	活动3
+      </div>
+    </div>
+    ...
+  </div>
+
+  <!-- 控制按钮 -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--轮播图结束-->
+	
+		
+		
+		
+		
+		
+		
+		
+		
+</div>
+	</body>
+</html>
